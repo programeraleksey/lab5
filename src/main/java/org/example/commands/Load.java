@@ -25,7 +25,7 @@ public class Load extends Command {
     public void apply(String arguments) {
         try {
             if (!arguments.isEmpty()) throw new InvalidInput("Неверное количество аргументов.");
-            new Clear(console, collectionManager).apply("");
+            if (!collectionManager.getCollection().isEmpty()) new Clear(console, collectionManager).apply("");
             var flag = fileManager.load();
             if (flag) {console.println("Коллекция успешно загружена.");}
             else {console.println("Произошла ошибка при загрузке коллекции. Повторите попытку.");}
