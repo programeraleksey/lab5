@@ -28,6 +28,7 @@ public class Main {
         }};
 
         String[] userCommand = {"", ""};
+        console.print("Введите команду --> ");
         while (true) {
             try {
                 userCommand = (console.readln().trim() + " ").split(" ", 2);
