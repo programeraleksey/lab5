@@ -1,7 +1,7 @@
 package org.example.utils;
 
 /**
- * Класс-исключение для облегченного вывода ошибок
+ * Класс-исключение для облегченного вывода ошибок.
  */
 public class InvalidInput extends Exception {
   public InvalidInput(String message) {
