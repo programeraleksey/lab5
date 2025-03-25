@@ -26,7 +26,7 @@ public class Save extends Command {
         try {
             if (!arguments.isEmpty()) throw new InvalidInput("Неверное количество аргументов.");
             if (collectionManager.getCollection().isEmpty()) throw new InvalidInput("Коллекция пуста.");
-            var flag = fileManager.save();
+            Boolean flag = fileManager.save();
             if (flag) {console.println("Коллекция успешно сохранена.");}
             else {console.println("Произошла ошибка при сохранении файла в коллекцию. Повторите попытку.");}
         } catch (InvalidInput e) {

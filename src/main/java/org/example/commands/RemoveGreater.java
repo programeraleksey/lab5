@@ -20,7 +20,7 @@ public class RemoveGreater extends Command{
     private CollectionManager collectionManager;
 
     public RemoveGreater(Console console, CollectionManager collectionManager) {
-        super("remove_greater {element}", "удалить из коллекции все элементы, превышающие заданный");
+        super("remove_greater", "удалить из коллекции все элементы, превышающие заданный");
         this.console = console;
         this.collectionManager = collectionManager;
     }
@@ -40,7 +40,7 @@ public class RemoveGreater extends Command{
             String houseName = flat.getHouse().getName();
             Integer houseyear = flat.getHouse().getYear();
             int housenumb = flat.getHouse().getNumberOfFloors();
-            var flag = false;
+            Boolean flag = false;
             LinkedList<Flat> flats = new LinkedList<Flat>();
             flats.addAll(collectionManager.getCollection());
             for (Flat flat1: flats) {

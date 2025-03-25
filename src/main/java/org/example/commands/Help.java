@@ -4,6 +4,8 @@ import org.example.utils.CommandManager;
 import org.example.utils.Console;
 import org.example.utils.InvalidInput;
 
+import java.util.Map;
+
 /**
  * Команда "help". Выводит справку по всем командам.
  */
@@ -21,7 +23,7 @@ public class Help extends Command{
     public void apply(String arguments) {
         try {
             if (!arguments.isEmpty()) throw new InvalidInput("Неверное количество аргументов.");
-            var map = commandManager.getCommands();
+            Map<String, Command> map = commandManager.getCommands();
             for (Command command: map.values()) {
                 console.println(command.getName() + ": " + command.getDescription());
             }

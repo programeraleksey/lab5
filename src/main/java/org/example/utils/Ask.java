@@ -117,11 +117,11 @@ public class Ask {
     }
 
     private static Furnish AskFurnish(Console console) {
-        var s = new StringBuilder();
+        StringBuilder s = new StringBuilder();
         for (Furnish furnish : Furnish.values()) {
             s.append(furnish.getDescription()).append(" ,");
         }
-        var x = s.substring(0, s.length() - 2);
+        String x = s.substring(0, s.length() - 2);
         while (true) {
             try {
                 console.print("furnish: (" + x + "):");
@@ -137,11 +137,11 @@ public class Ask {
     }
 
     private static View Askview(Console console) {
-        var s = new StringBuilder();
+        StringBuilder s = new StringBuilder();
         for (View view : View.values()) {
             s.append(view.getDescription()).append(" ,");
         }
-        var x = s.substring(0, s.length() - 2);
+        String x = s.substring(0, s.length() - 2);
         while (true) {
             try {
                 console.print("view: (" + x + "):");

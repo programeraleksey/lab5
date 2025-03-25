@@ -14,7 +14,7 @@ public class RemoveByfurnish extends Command{
     private CollectionManager collectionManager;
 
     public RemoveByfurnish(Console console, CollectionManager collectionManager) {
-        super("remove_any_by_furnish furnish", "удалить из коллекции один элемент, значение поля furnish которого эквивалентно заданному");
+        super("remove_any_by_furnish", "удалить из коллекции один элемент, значение поля furnish которого эквивалентно заданному");
         this.console = console;
         this.collectionManager = collectionManager;
     }
@@ -24,7 +24,7 @@ public class RemoveByfurnish extends Command{
         try {
             if (arguments.isEmpty()) throw new InvalidInput("Неверное количество аргументов.");
             if (collectionManager.getCollection().isEmpty()) throw new InvalidInput("Коллекция пуста.");
-            var x = Furnish.valueOf(arguments);
+            Furnish x = Furnish.valueOf(arguments);
             for (Flat flat : collectionManager.getCollection()) {
                 if (flat.getFurnish().equals(x)) {
                     collectionManager.removeById(flat.getId());

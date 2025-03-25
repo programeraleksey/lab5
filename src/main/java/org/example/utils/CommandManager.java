@@ -13,11 +13,10 @@ public class CommandManager {
 
     /**
      * Добавляет команду.
-     * @param commandName Название команды.
      * @param command Команда.
      */
-    public void add(String commandName, Command command) {
-        commands.put(commandName, command);
+    public void add(Command command) {
+        commands.put(command.getName(), command);
     }
 
     /**

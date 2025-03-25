@@ -12,7 +12,7 @@ public class ExecuteScript extends Command {
     private Console console;
 
     public ExecuteScript(Console console) {
-        super("execute_script filename", "считать и исполнить скрипт из указанного файла");
+        super("execute_script", "считать и исполнить скрипт из указанного файла");
         this.console = console;
     }
 

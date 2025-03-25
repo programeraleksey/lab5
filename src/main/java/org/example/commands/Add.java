@@ -10,7 +10,7 @@ public class Add extends Command{
     private CollectionManager collectionManager;
 
     public Add(Console console, CollectionManager collectionManager) {
-        super("add {element}", "добавляет новый элемент в коллекцию");
+        super("add", "добавляет новый элемент в коллекцию");
         this.console = console;
         this.collectionManager = collectionManager;
     }

@@ -29,7 +29,7 @@ public class Info extends Command{
             if (fileManager.getLastSaveDate() == null) { lastSaveDate = "в данной сессии сохранения еще не происходило";}
             else { lastSaveDate = fileManager.getLastInitDate().toString();}
 
-            var s="Сведения о коллекции:\n";
+            String s="Сведения о коллекции:\n";
             s+=" Тип: " + collectionManager.getCollection().getClass().toString()+"\n";
             s+=" Количество элементов: " + collectionManager.getCollection().size()+"\n";
             s+=" Дата последнего сохранения: " + lastSaveDate+"\n";

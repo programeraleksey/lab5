@@ -31,7 +31,7 @@ public class CollectionManager {
      * @param id id элемента.
      */
     public void removeById(long id){
-        var el = byId(id);
+        Flat el = byId(id);
         if (el == null) return;
         collection.remove(el);
         flats.remove(id);

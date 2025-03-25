@@ -25,7 +25,7 @@ public class Clear extends Command {
         try {
             if (!arguments.isEmpty()) throw new InvalidInput("Неверное количество аргументов.");
             if (collectionManager.getCollection().isEmpty()) throw new InvalidInput("Коллекция пуста.");
-            var flats = new LinkedList<Flat>();
+            LinkedList<Flat> flats = new LinkedList<>();
             flats.addAll(collectionManager.getCollection());
             for (Flat flat: flats) {
                 collectionManager.removeById(flat.getId());

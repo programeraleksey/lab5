@@ -5,10 +5,7 @@ import org.example.models.*;
 import java.io.*;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static java.lang.Double.parseDouble;
 import static java.lang.Float.parseFloat;
@@ -92,7 +89,7 @@ public class FileManager {
         String[] flats = string.split("\"},\\{\"");
         for (String flat: flats) {
             Map<String, String> map = new HashMap<>();
-            var yach = flat.split("\",\"");
+            String[] yach = flat.split("\",\"");
             for (String x: yach) {
                 String key = x.split("\":\"")[0];
                 String value = "";

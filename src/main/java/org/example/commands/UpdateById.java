@@ -17,7 +17,7 @@ public class UpdateById extends Command{
     private CollectionManager collectionManager;
 
     public UpdateById(Console console, CollectionManager collectionManager) {
-        super("update id {element}", "обновить значение элемента коллекции, id которого равен заданному");
+        super("update", "обновить значение элемента коллекции, id которого равен заданному");
         this.console = console;
         this.collectionManager = collectionManager;
     }
