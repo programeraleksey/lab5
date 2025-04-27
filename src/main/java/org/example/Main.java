@@ -44,3 +44,6 @@ public class Main {
     }
 }
 //execute_script text.txt
+
+//название_команды аргументы
+//название_команды

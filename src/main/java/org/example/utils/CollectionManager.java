@@ -12,8 +12,6 @@ public class CollectionManager {
     private long idCounter = 0;
     private Map<Long, Flat> flats = new HashMap<>();
     private LinkedList<Flat> collection = new LinkedList<>();
-    private Date lastInitTime;
-    private Date lastSaveTime;
 
     public CollectionManager() {}
 
